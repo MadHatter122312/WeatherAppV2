@@ -1,0 +1,32 @@
+<div ng-controller="SearchController as home" ng-init="home.load()" class="container row">
+  <h3 class="flow-text">Your Local Weather, delivered: </h3>
+  <div class="row">
+    <div class="col s12 m6">
+      <div class="card-panel teal">
+        <h4 class="white-text">Current weather:</h4>
+        <h5 class="white-text">your location:</h5>
+        <span class="white-text">
+          <p> {{home.getWeater().currently.summary}} </p>
+          <p>Temperature: {{home.getWeather().currently.temperature}} &#8457</p>
+          <p>Feels Like:  {{home.getWeather().currently.apparentTemperature}} &#8457</p>
+        </span>
+      </div>
+    </div>
+    <div class="col s12 m6">
+      <div class="card-panel teal">
+        <h4 class="white-text">Looking Ahead:</h4>
+        <span class="white-text">
+          <p> {{home.weather.daily.summary}} </p>
+          <p>Max temperature tomorrow: {{home.getWeather().daily.data[0].temperatureMax}} &#8457</p>
+          <p>Min temperature tomorrow: {{home.getWeather().daily.data[0].temperatureMin}} &#8457</p>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div ng-controller="NavController as homePage">
+      <a ng-click="homePage.logIn()" class="waves-effect waves-light btn-large">Log In</a>
+      <a ng-click="homePage.signUp()" class="waves-effect waves-light btn-large">Sign Up</a>
+    </div>
+  </div>
+</div>

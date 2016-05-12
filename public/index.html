@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="skyCast">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.4/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="scripts/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.4/js/materialize.min.js"></script>
+    <script src="scripts/angular/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+
+    <script src="js/factories/user.js"></script>
+    <script src="js/factories/weather.js"></script>
+    <script src="js/controllers/navController.js"></script>
+    <script src="js/controllers/loginController.js"></script>
+    <script src="js/controllers/signUpController.js"></script>
+    <script src="js/controllers/searchController.js"></script>
+
+
+    <script src="js/app.js"></script>
+    <script src="js/appRouter.js"></script>
+    <script src="js/jquery-init.js"></script>
+
+  </head>
+  <body class="grey lighten-3">
+  <nav ng-controller="NavController as navbar" class="blue darken-3" role="navigation">
+   <div class="nav-wrapper container"><a id="logo-container" ui-sref="home" class="brand-logo"><i>skyCast</i></a>
+     <ul class="right hide-on-med-and-down">
+       <li><a ng-click="navbar.goHome()">home</a></li>
+       <li><a ng-click="navbar.signUp()">sign up</a></li>
+       <li><a ng-click="navbar.logIn()">login</a></li>
+       <li><a ng-click="navbar.profile()">profile</a></li>
+       <li><a ng-click="navbar.logOut()">sign out</a></li>
+     </ul>
+     <ul id="nav-mobile" class="side-nav" style="left: -250px;">
+       <li><a ng-click="navbar.goHome()">home</a></li>
+       <li><a ng-click="navbar.signUp()">sign up</a></li>
+       <li><a ng-click="navbar.logIn()">login</a></li>
+       <li><a ng-click="navbar.profile()">profile</a></li>
+       <li><a ng-click="navbar.logOut()">sign out</a></li>
+     </ul>
+     <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+   </div>
+ </nav>
+
+  <div ui-view>
+
+  </div>
+
+
+  </body>
+</html>
