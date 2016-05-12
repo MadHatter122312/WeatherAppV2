@@ -10,8 +10,10 @@ let app = express();
 let dotenv = require('dotenv');
 dotenv.load();
 
+let mongoPath = 'mongodb://heroku_p9sl513c:7s3srcma1ac2vvea2d6p95edkd@ds021462.mlab.com:21462/heroku_p9sl513c'
+
 let mongoose = require('mongoose');
-mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost:27017/skycast')
+mongoose.connect(mongoPath)
 
 let db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
