@@ -1,7 +1,5 @@
 'use strict';
-// angular.module('skyCast').controller('LoginController', LoginController)
-//
-// LoginController.$inject = ['User','$state','$http'];
+
 
 function LoginController($http, $state, User) {
   let self = this;

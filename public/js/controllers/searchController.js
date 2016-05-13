@@ -1,7 +1,7 @@
 'use strict';
 
 function SearchController(User, Weather, $http, $state) {
-  console.log('instance of search controller!');
+  console.log('search controller running');
   let self = this;
 
   self.searchFor = undefined;

@@ -1,7 +1,7 @@
 
 'use strict';
 
-console.log('navbar loaded');
+console.log('navbar running');
 
 function NavController($http, $state, User) {
   let self = this;
