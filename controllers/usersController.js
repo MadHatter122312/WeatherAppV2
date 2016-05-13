@@ -6,6 +6,7 @@ let router = express.Router();
 let bodyParser = require('body-parser');
 
 const jwt = require('jsonwebtoken');
+//stored in .env
 const secret = process.env.SECRET;
 
 
