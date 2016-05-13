@@ -1,11 +1,11 @@
 <div ng-controller="SignupController as signup" class="container">
   <form class="add-user" ng-submit="signup.sendUser(signup.signupUser)">
     <div class="row">
-      <div class="input-field col s6">
+      <div class="input-field col s12">
         <input placeholder="userName123" ng-model="signup.signupUser.userName" type="text" class="validate">
         <label for="userName">userName</label>
       </div>
-      <div class="input-field col s6">
+      <div class="input-field col s12">
         <input placeholder="email@abc.def" ng-model="signup.signupUser.email" type="email" class="validate">
         <label for="email" data-error="wrong" data-success="right" >Email</label>
       </div>

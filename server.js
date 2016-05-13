@@ -10,10 +10,20 @@ let app = express();
 let dotenv = require('dotenv');
 dotenv.load();
 
+//Heroku would not run process.evn it's a common issue with MongoLab
 let mongoPath = 'mongodb://heroku_p9sl513c:7s3srcma1ac2vvea2d6p95edkd@ds021462.mlab.com:21462/heroku_p9sl513c'
 
 let mongoose = require('mongoose');
 mongoose.connect(mongoPath)
+
+/*
+
+let mongoPath = 'mongodb://heroku_p9sl513c:7s3srcma1ac2vvea2d6p95edkd@ds021462.mlab.com:21462/heroku_p9sl513c'
+
+let mongoose = require('mongoose');
+mongoose.connect(mongoPath)
+
+*/
 
 let db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
