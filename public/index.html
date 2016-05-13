@@ -2,7 +2,7 @@
 <html ng-app="skyCast">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>SkyCast Weather</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.4/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -30,19 +30,19 @@
    <div class="nav-wrapper container"><a id="logo-container" ui-sref="home" class="brand-logo"><i>SKYCAST</i></a>
      <ul class="right hide-on-med-and-down">
        <li><a ng-click="navbar.goHome()">HOME</a></li>
+       <li><a ng-click="navbar.profile()">YOUR SKYCAST</a></li>
        <li><a ng-click="navbar.signUp()">REGISTER</a></li>
        <li><a ng-click="navbar.logIn()">LOG IN</a></li>
-       <li><a ng-click="navbar.profile()">YOUR SKYCAST</a></li>
        <li><a ng-click="navbar.logOut()">LOG OUT</a></li>
      </ul>
      <ul id="nav-mobile" class="side-nav" style="left: -250px;">
        <li><a ng-click="navbar.goHome()">HOME</a></li>
+       <li><a ng-click="navbar.profile()">YOUR SKYCAST</a></li>
        <li><a ng-click="navbar.signUp()">REGISTER</a></li>
        <li><a ng-click="navbar.logIn()">LOGIN</a></li>
-       <li><a ng-click="navbar.profile()">YOUR SKYCAST</a></li>
        <li><a ng-click="navbar.logOut()">LOG OUT</a></li>
      </ul>
-     <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">MENU</i></a>
+     <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
    </div>
  </nav>
 
